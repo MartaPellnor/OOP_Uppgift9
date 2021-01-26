@@ -1,0 +1,13 @@
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\bin\Debug\netcoreapp3.1\OOP_Uppgift9.exe
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\bin\Debug\netcoreapp3.1\OOP_Uppgift9.deps.json
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\bin\Debug\netcoreapp3.1\OOP_Uppgift9.runtimeconfig.json
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\bin\Debug\netcoreapp3.1\OOP_Uppgift9.runtimeconfig.dev.json
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\bin\Debug\netcoreapp3.1\OOP_Uppgift9.dll
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\bin\Debug\netcoreapp3.1\OOP_Uppgift9.pdb
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.csprojAssemblyReference.cache
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.AssemblyInfoInputs.cache
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.AssemblyInfo.cs
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.csproj.CoreCompileInputs.cache
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.dll
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.pdb
+C:\Users\mpell\Documents\GitHub\OOP_Uppgift9\obj\Debug\netcoreapp3.1\OOP_Uppgift9.genruntimeconfig.cache

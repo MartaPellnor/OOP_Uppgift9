@@ -14,7 +14,7 @@ namespace OOP_Uppgift9
             string winner;
 
             do {
-                Console.WriteLine("ROUND {0}", numberOfRounds);
+                Console.WriteLine("\n"+"ROUND {0}", numberOfRounds);
                 winner = Round();
                 if (winner == "player"){
                     playerScore++;
@@ -25,10 +25,17 @@ namespace OOP_Uppgift9
                 else if (winner == "tie"){
 
                 }
+                numberOfRounds++;
+            }while(playerScore < 3 && computerScore < 3);
 
-            }while(playerScore < 3 || computerScore < 3);
+            if (playerScore == 3) {
+                Console.WriteLine("\n"+"You won the game!");
+            }
+            else if (computerScore == 3) {
+                Console.WriteLine("\n"+"You lost the game! :(");
+            }
 
-            Console.WriteLine("Press any key to quit");
+            Console.WriteLine("Thanks for playing! Press any key to quit.");
             Console.ReadKey();
         }
 
@@ -43,6 +50,7 @@ namespace OOP_Uppgift9
         static string PlayerTurn()
         {
             string playerInput;
+            bool exitLoop = false;
 
             do {
                 Console.WriteLine("Will you choose Rock (r), Paper (p) or Scissors (s)?");
@@ -58,11 +66,12 @@ namespace OOP_Uppgift9
                     else if(playerInput == "s"){
                         Console.WriteLine("You chose Scissors!");
                     }
+                    exitLoop = true;
                 }
                 else {
                     Console.WriteLine("Please write one of the letters 'r', 'p' or 's' in lower case.");
                 }
-            }while(playerInput != "r" || playerInput != "p" || playerInput != "s");
+            }while(exitLoop == false);
 
             return playerInput;
         }
@@ -96,30 +105,39 @@ namespace OOP_Uppgift9
 
             if (playerinput == "r" && computerInput == "r") {
                 winner = "tie";
+                Console.WriteLine("It's a tie!");
             }
             else if (playerinput == "r" && computerInput == "p") {
                 winner = "computer";
+                Console.WriteLine("The computer won!");
             }
             else if (playerinput == "r" && computerInput == "s") {
                 winner = "player";
+                Console.WriteLine("You won!");
             }
             else if (playerinput == "p" && computerInput == "r") {
                 winner = "player";
+                Console.WriteLine("You won!");
             }
             else if (playerinput == "p" && computerInput == "p") {
                 winner = "tie";
+                Console.WriteLine("It's a tie!");
             }
             else if (playerinput == "p" && computerInput == "s") {
                 winner = "computer";
+                Console.WriteLine("The computer won!");
             }
             else if (playerinput == "s" && computerInput == "r") {
                 winner = "computer";
+                Console.WriteLine("The computer won!");
             }
             else if (playerinput == "s" && computerInput == "p") {
                 winner = "player";
+                Console.WriteLine("You won!");
             }
             else if (playerinput == "s" && computerInput == "s") {
                 winner = "tie";
+                Console.WriteLine("It's a tie!");
             }
 
             return winner;
