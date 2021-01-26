@@ -11,7 +11,7 @@ namespace OOP_Uppgift9
             Console.WriteLine("ROUND 1");
             string playerInput = PlayerTurn();
             string computerInput = ComputerTurn();
-
+            WhoWon(playerInput, computerInput);
 
 
             Console.WriteLine("Press any key to quit");
@@ -39,7 +39,26 @@ namespace OOP_Uppgift9
 
         static string ComputerTurn()
         {
-            return;
+            Random numberGenerator = new Random();
+
+            int computerInput = numberGenerator.Next(0,3);
+            string computerInputLetter = "null";
+
+            if (computerInput == 0) {
+                computerInputLetter = "r";
+            }
+            else if (computerInput == 1){
+                computerInputLetter = "p";
+            }
+            else if (computerInput == 2){
+                computerInputLetter = "s";
+            }
+
+            return computerInputLetter;
+        }
+
+        static void WhoWon(string playerinput, string computerInput) {
+
         }
 
         static int Score()
