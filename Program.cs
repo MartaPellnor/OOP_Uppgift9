@@ -25,6 +25,7 @@ namespace OOP_Uppgift9
                 else if (winner == "tie"){
 
                 }
+                Console.WriteLine("SCORE: {0}-{1}", playerScore, computerScore);
                 numberOfRounds++;
             }while(playerScore < 3 && computerScore < 3);
 
@@ -35,7 +36,7 @@ namespace OOP_Uppgift9
                 Console.WriteLine("\n"+"You lost the game! :(");
             }
 
-            Console.WriteLine("Thanks for playing! Press any key to quit.");
+            Console.WriteLine("\n"+"Thanks for playing! Press any key to quit.");
             Console.ReadKey();
         }
 
@@ -53,7 +54,7 @@ namespace OOP_Uppgift9
             bool exitLoop = false;
 
             do {
-                Console.WriteLine("Will you choose Rock (r), Paper (p) or Scissors (s)?");
+                Console.WriteLine("Do you choose Rock (r), Paper (p) or Scissors (s)?");
                 playerInput = Console.ReadLine();
 
                 if(playerInput == "r" || playerInput == "p" || playerInput == "s") {
@@ -69,7 +70,7 @@ namespace OOP_Uppgift9
                     exitLoop = true;
                 }
                 else {
-                    Console.WriteLine("Please write one of the letters 'r', 'p' or 's' in lower case.");
+                    Console.WriteLine("Please write one of the letters 'r', 'p' or 's' in lower case." + "\n");
                 }
             }while(exitLoop == false);
 
