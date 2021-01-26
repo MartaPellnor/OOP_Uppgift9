@@ -8,14 +8,36 @@ namespace OOP_Uppgift9
         {
             Console.WriteLine("Welcome to the Rock, Paper, Scissors game!");
             
-            Console.WriteLine("ROUND 1");
-            string playerInput = PlayerTurn();
-            string computerInput = ComputerTurn();
-            WhoWon(playerInput, computerInput);
+            int numberOfRounds = 1;
+            int playerScore = 0;
+            int computerScore = 0;
+            string winner;
 
+            do {
+                Console.WriteLine("ROUND {0}", numberOfRounds);
+                winner = Round();
+                if (winner == "player"){
+                    playerScore++;
+                }
+                else if (winner == "computer"){
+                    computerScore++;
+                }
+                else if (winner == "tie"){
+
+                }
+
+            }while(playerScore < 3 || computerScore < 3);
 
             Console.WriteLine("Press any key to quit");
             Console.ReadKey();
+        }
+
+        static string Round() {
+            string playerInput = PlayerTurn();
+            string computerInput = ComputerTurn();
+            string winner = WhoWon(playerInput, computerInput);
+
+            return winner;
         }
 
         static string PlayerTurn()
@@ -27,7 +49,15 @@ namespace OOP_Uppgift9
                 playerInput = Console.ReadLine();
 
                 if(playerInput == "r" || playerInput == "p" || playerInput == "s") {
-
+                    if(playerInput == "r"){
+                        Console.WriteLine("You chose Rock!");
+                    }
+                    else if(playerInput == "p"){
+                        Console.WriteLine("You chose Paper!");
+                    }
+                    else if(playerInput == "s"){
+                        Console.WriteLine("You chose Scissors!");
+                    }
                 }
                 else {
                     Console.WriteLine("Please write one of the letters 'r', 'p' or 's' in lower case.");
@@ -46,25 +76,54 @@ namespace OOP_Uppgift9
 
             if (computerInput == 0) {
                 computerInputLetter = "r";
+                Console.WriteLine("The computer chose Rock!");
             }
             else if (computerInput == 1){
                 computerInputLetter = "p";
+                Console.WriteLine("The computer chose Paper!");
             }
             else if (computerInput == 2){
                 computerInputLetter = "s";
+                Console.WriteLine("The computer chose Scissors!");
             }
 
             return computerInputLetter;
         }
 
-        static void WhoWon(string playerinput, string computerInput) {
+        static string WhoWon(string playerinput, string computerInput) {
 
+            string winner = "null";
+
+            if (playerinput == "r" && computerInput == "r") {
+                winner = "tie";
+            }
+            else if (playerinput == "r" && computerInput == "p") {
+                winner = "computer";
+            }
+            else if (playerinput == "r" && computerInput == "s") {
+                winner = "player";
+            }
+            else if (playerinput == "p" && computerInput == "r") {
+                winner = "player";
+            }
+            else if (playerinput == "p" && computerInput == "p") {
+                winner = "tie";
+            }
+            else if (playerinput == "p" && computerInput == "s") {
+                winner = "computer";
+            }
+            else if (playerinput == "s" && computerInput == "r") {
+                winner = "computer";
+            }
+            else if (playerinput == "s" && computerInput == "p") {
+                winner = "player";
+            }
+            else if (playerinput == "s" && computerInput == "s") {
+                winner = "tie";
+            }
+
+            return winner;
         }
 
-        static int Score()
-        {
-
-            return;
-        }
     }
 }
